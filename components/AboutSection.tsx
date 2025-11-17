@@ -1,0 +1,58 @@
+import Link from "next/link";
+import Image from "next/image";
+
+export default function AboutSection() {
+  return (
+    <section className="py-20 bg-[#F9F9F9]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div>
+            <h2 className="text-5xl font-medium text-gray-900 mb-6">
+              Your Trusted Partner in <br />
+              Pharmaceutical Distribution
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              For over a decade, Impact Pharma has been at the forefront of pharmaceutical wholesale distribution, delivering quality medicines and medical supplies to healthcare facilities across the region with unwavering commitment to excellence and reliability.
+            </p>
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-7 py-3.5 rounded font-semibold text-base transition-all duration-200"
+            >
+              Learn More About Us
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Right Column - Video */}
+          <div className="relative h-[400px] lg:h-[500px]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-lg"
+            >
+              <source
+                src="https://impactpharma.b-cdn.net/68a08156a0c959a572e3f565_68c6ad11d1780ea07f798b89_neg-transcode.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
