@@ -1,12 +1,9 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -15,7 +12,7 @@ model BlogPost {
   title     String
   slug      String   @unique
   excerpt   String
-  content   String   // JSON string
+  content   String
   image     String
   category  String
   author    String
@@ -37,54 +34,54 @@ model ContactMessage {
 }
 
 model QuoteRequest {
-  id                    Int      @id @default(autoincrement())
-  fullName              String
-  email                 String
-  phone                 String
-  company               String
-  position              String?
-  organizationType      String
-  location              String
-  productCategory       String
-  productDetails        String
-  quantity              String
-  deliveryDate          String?
-  specialRequirements   String?
-  attachmentUrl         String?  // PDF file URL
-  agreedToTerms         Boolean
-  status                String   @default("pending")
-  createdAt             DateTime @default(now())
+  id                  Int      @id @default(autoincrement())
+  fullName            String
+  email               String
+  phone               String
+  company             String
+  position            String?
+  organizationType    String
+  location            String
+  productCategory     String
+  productDetails      String
+  quantity            String
+  deliveryDate        String?
+  specialRequirements String?
+  attachmentUrl       String?
+  agreedToTerms       Boolean
+  status              String   @default("pending")
+  createdAt           DateTime @default(now())
 }
 
 model Service {
   id          Int      @id @default(autoincrement())
   title       String
   description String
-  image       String   // Image URL
-  features    String   // JSON array of features
+  image       String
+  features    String
   order       Int      @default(0)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
 
 model ContactDetails {
-  id          Int      @id @default(autoincrement())
-  type        String   // 'general' or 'location'
-  label       String   // e.g., 'Head Office - Kigali'
-  phone       String?
-  email       String?
-  address     String?
-  hours       String?  // Business hours
-  order       Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  type      String
+  label     String
+  phone     String?
+  email     String?
+  address   String?
+  hours     String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model TeamMember {
   id          Int      @id @default(autoincrement())
   name        String
   role        String
-  image       String   // Image URL
+  image       String
   description String
   order       Int      @default(0)
   createdAt   DateTime @default(now())
@@ -95,8 +92,8 @@ model ProductCategory {
   id          Int      @id @default(autoincrement())
   name        String
   description String
-  image       String   // Image URL
-  products    String   // JSON array of product names
+  image       String
+  products    String
   order       Int      @default(0)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
