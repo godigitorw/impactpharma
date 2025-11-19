@@ -11,12 +11,21 @@
   "dependencies": {
     "@prisma/client": "^6.19.0",
     "@tailwindcss/postcss": "^4.1.17",
+    "@tiptap/extension-bold": "^3.11.0",
+    "@tiptap/extension-heading": "^3.11.0",
+    "@tiptap/extension-italic": "^3.11.0",
+    "@tiptap/pm": "^3.11.0",
+    "@tiptap/react": "^3.11.0",
+    "@tiptap/starter-kit": "^3.11.0",
+    "bcryptjs": "^3.0.3",
     "next": "^16.0.3",
+    "next-auth": "^4.24.13",
     "prisma": "^6.19.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -25,6 +34,7 @@
     "eslint-config-next": "^16.0.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
 }
