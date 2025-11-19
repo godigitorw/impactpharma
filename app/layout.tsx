@@ -8,6 +8,9 @@ const interTight = Inter_Tight({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Impact Pharma - Your Trusted Partner in Pharmaceutical Wholesale Distribution",
   description: "Supplying quality medicines and medical supplies to hospitals, clinics, and pharmacies",
+  icons: {
+    icon: "https://impactpharma.b-cdn.net/web%20web%20icon.png",
+  },
 };
 
 export default function RootLayout({
