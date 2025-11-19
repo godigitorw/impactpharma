@@ -18,6 +18,7 @@ export default function ProductsPage() {
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [categoryToDelete, setCategoryToDelete] = useState<{ id: number; name: string } | null>(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editingCategory, setEditingCategory] = useState<ProductCategory | null>(null);
@@ -60,6 +61,7 @@ export default function ProductsPage() {
   const handleDelete = async () => {
     if (!categoryToDelete) return;
 
+    setDeleting(true);
     try {
       const response = await fetch(`/api/admin/products?id=${categoryToDelete.id}`, {
         method: "DELETE",
@@ -75,6 +77,8 @@ export default function ProductsPage() {
     } catch (error) {
       console.error("Error deleting product category:", error);
       alert("Error deleting product category");
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -426,7 +430,7 @@ export default function ProductsPage() {
           setCategoryToDelete(null);
         }}
         title={categoryToDelete?.name || ""}
-        type="product category"
+        isDeleting={deleting}
       />
     </div>
   );

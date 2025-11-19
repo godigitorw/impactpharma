@@ -81,7 +81,7 @@ export default async function ProductsPage() {
                       Product Range:
                     </h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {category.products.map((product, idx) => (
+                      {category.products.map((product: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
                           <svg
                             className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"

@@ -20,6 +20,7 @@ export default function ServicesPage() {
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [serviceToDelete, setServiceToDelete] = useState<{ id: number; title: string } | null>(null);
 
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function ServicesPage() {
   const handleDelete = async () => {
     if (!serviceToDelete) return;
 
+    setDeleting(true);
     try {
       const response = await fetch("/api/admin/services", {
         method: "DELETE",
@@ -70,6 +72,8 @@ export default function ServicesPage() {
     } catch (error) {
       console.error("Error deleting service:", error);
       alert("Error deleting service");
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -207,7 +211,7 @@ export default function ServicesPage() {
           setServiceToDelete(null);
         }}
         title={serviceToDelete?.title || ""}
-        type="service"
+        isDeleting={deleting}
       />
     </div>
   );

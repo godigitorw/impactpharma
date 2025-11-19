@@ -18,6 +18,7 @@ export default function ContactDetailsPage() {
   const [contactDetails, setContactDetails] = useState<ContactDetail[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [detailToDelete, setDetailToDelete] = useState<{ id: number; label: string } | null>(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editingDetail, setEditingDetail] = useState<ContactDetail | null>(null);
@@ -61,6 +62,7 @@ export default function ContactDetailsPage() {
   const handleDelete = async () => {
     if (!detailToDelete) return;
 
+    setDeleting(true);
     try {
       const response = await fetch(`/api/admin/contact-details?id=${detailToDelete.id}`, {
         method: "DELETE",
@@ -76,6 +78,8 @@ export default function ContactDetailsPage() {
     } catch (error) {
       console.error("Error deleting contact detail:", error);
       alert("Error deleting contact detail");
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -398,7 +402,7 @@ export default function ContactDetailsPage() {
           setDetailToDelete(null);
         }}
         title={detailToDelete?.label || ""}
-        type="contact detail"
+        isDeleting={deleting}
       />
     </div>
   );

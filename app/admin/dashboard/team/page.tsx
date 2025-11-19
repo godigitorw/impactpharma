@@ -18,6 +18,7 @@ export default function TeamPage() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [memberToDelete, setMemberToDelete] = useState<{ id: number; name: string } | null>(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editingMember, setEditingMember] = useState<TeamMember | null>(null);
@@ -59,6 +60,7 @@ export default function TeamPage() {
   const handleDelete = async () => {
     if (!memberToDelete) return;
 
+    setDeleting(true);
     try {
       const response = await fetch(`/api/admin/team?id=${memberToDelete.id}`, {
         method: "DELETE",
@@ -74,6 +76,8 @@ export default function TeamPage() {
     } catch (error) {
       console.error("Error deleting team member:", error);
       alert("Error deleting team member");
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -371,7 +375,7 @@ export default function TeamPage() {
           setMemberToDelete(null);
         }}
         title={memberToDelete?.name || ""}
-        type="team member"
+        isDeleting={deleting}
       />
     </div>
   );
