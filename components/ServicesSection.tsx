@@ -21,7 +21,7 @@ export default async function ServicesSection() {
   const services = await getServices();
 
   return (
-    <section className="py-10 sm:py-12 lg:py-20 bg-white">
+    <section className="py-10 sm:py-12 lg:py-20 bg-[#F9F9F9]">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         {/* Title, Description, and CTA - Centered */}
         <div className="text-center mb-6 sm:mb-8 lg:mb-12">
@@ -60,7 +60,7 @@ export default async function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden group"
+              className="bg-white border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden group"
             >
               <div className="relative h-40 sm:h-48 w-full overflow-hidden">
                 <Image
