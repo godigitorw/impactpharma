@@ -63,17 +63,14 @@ export default function HeroSection() {
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">10+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Years Experience</div>
             </div>
-            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
             <div className="text-center md:text-left">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">500+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Products</div>
             </div>
-            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
             <div className="text-center md:text-left">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">200+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Clients Served</div>
             </div>
-            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
             <div className="text-center md:text-left">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">5+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Certifications</div>
