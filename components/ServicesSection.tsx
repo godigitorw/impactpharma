@@ -26,10 +26,10 @@ export default async function ServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
           {/* Left Column - Title, Description, CTA (Sticky) */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
               Comprehensive Solutions for Healthcare
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
               We provide comprehensive pharmaceutical distribution services,
               ensuring quality products reach healthcare facilities efficiently
               and reliably. Our commitment to excellence makes us the preferred
@@ -37,7 +37,7 @@ export default async function ServicesSection() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-7 py-3.5 rounded font-semibold text-base transition-all duration-200 w-auto"
             >
               View All Services
               <svg
