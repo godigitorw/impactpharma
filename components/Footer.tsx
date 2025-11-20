@@ -51,9 +51,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-10 lg:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Column 1: Company Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div>
             <div className="mb-3 sm:mb-4">
               <Image
                 src="https://impactpharma.b-cdn.net/Impact%20Pharma%20new%20Logo.png"
@@ -68,42 +68,45 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Column 2: Quick Links & Product Categories */}
+          <div className="grid grid-cols-2 gap-6 sm:gap-8">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
+              <ul className="space-y-1.5 sm:space-y-2">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Product Categories */}
+            <div>
+              <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Product Categories</h3>
+              <ul className="space-y-1.5 sm:space-y-2">
+                {productCategories.map((category) => (
+                  <li key={category.name}>
+                    <Link
+                      href={category.href}
+                      className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
+                    >
+                      {category.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Column 3: Product Categories */}
+          {/* Column 3: Contact Info */}
           <div>
-            <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Product Categories</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              {productCategories.map((category) => (
-                <li key={category.name}>
-                  <Link
-                    href={category.href}
-                    className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
-                  >
-                    {category.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4: Contact Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h3>
             {contactDetails.length > 0 ? (
               <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
