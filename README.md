@@ -1,6 +1,6 @@
 # Impact Pharma
 
-Your Trusted Partner in Pharmaceutical Wholesale Distribution
+Your Trusted Partner in Medical Equipment Distribution
 
 ## Tech Stack
 
