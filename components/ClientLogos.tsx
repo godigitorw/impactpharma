@@ -62,8 +62,7 @@ export default function ClientLogos() {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-6 flex items-center justify-center"
-              style={{ width: "120px", height: "60px" }}
+              className="flex-shrink-0 mx-2 sm:mx-6 flex items-center justify-center w-[70px] h-[40px] sm:w-[120px] sm:h-[60px]"
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image
