@@ -15,13 +15,32 @@ export default function HeroSection() {
             Supplying quality medicines and medical supplies to hospitals, clinics, and pharmacies across the region
           </p>
 
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-row gap-3 sm:gap-4">
             <Link
               href="/request-quote"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
             >
               Request Quote
+              <svg
+                className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-primary border-2 border-primary px-5 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
+            >
+              About Us
               <svg
                 className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
