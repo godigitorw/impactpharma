@@ -88,7 +88,7 @@ export default async function AboutPage() {
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                 <p>
                   Founded in 2019, Impact Pharma has grown to become one of the most trusted names
-                  in medical equipment and healthcare product wholesale distribution across the region.
+                  in medical equipment and healthcare product distribution across the region.
                 </p>
                 <p>
                   Our journey began with a simple mission: to ensure that quality medical devices,
@@ -147,7 +147,7 @@ export default async function AboutPage() {
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Our Vision</h3>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                To be the leading medical equipment and healthcare product wholesale distributor in East Africa,
+                To be the leading medical equipment and healthcare product distributor in East Africa,
                 recognized for excellence in service delivery, innovation in supply chain management, and
                 unwavering commitment to improving healthcare accessibility.
               </p>

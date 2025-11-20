@@ -12,7 +12,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed max-w-xl">
-            Leading wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products
+            Leading distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products
           </p>
 
           {/* CTA Buttons */}

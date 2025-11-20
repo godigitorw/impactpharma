@@ -13,7 +13,7 @@ export default function AboutSection() {
               Medical Equipment Distribution
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
-              Since 2019, Impact Pharma has been a leading wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products. We serve over 2000 clients with a comprehensive range of 1000+ products, delivering excellence and reliability across the region.
+              Since 2019, Impact Pharma has been a leading distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products. We serve over 2000 clients with a comprehensive range of 1000+ products, delivering excellence and reliability across the region.
             </p>
             <Link
               href="/about"
