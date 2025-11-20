@@ -27,7 +27,7 @@ export default async function AboutPage() {
         </svg>
       ),
       title: "Quality First",
-      description: "We prioritize quality in every aspect of our operations, ensuring all products meet the highest pharmaceutical standards.",
+      description: "We prioritize quality in every aspect of our operations, ensuring all medical devices and healthcare products meet the highest international standards.",
     },
     {
       icon: (
@@ -71,7 +71,7 @@ export default async function AboutPage() {
               About Impact Pharma
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
-              Your trusted partner in pharmaceutical distribution for over a decade
+              Your trusted partner in medical equipment and healthcare product distribution since 2019
             </p>
           </div>
         </div>
@@ -87,20 +87,19 @@ export default async function AboutPage() {
               </h2>
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2014, Impact Pharma has grown from a small pharmaceutical distributor
-                  to become one of the most trusted names in healthcare supply chain management across
-                  the region.
+                  Founded in 2019, Impact Pharma has grown to become one of the most trusted names
+                  in medical equipment and healthcare product wholesale distribution across the region.
                 </p>
                 <p>
-                  Our journey began with a simple mission: to ensure that quality medicines and
-                  medical supplies reach healthcare providers reliably and efficiently. Over the years,
-                  we have built strong relationships with manufacturers, healthcare facilities, and
-                  regulatory bodies.
+                  Our journey began with a simple mission: to ensure that quality medical devices,
+                  equipment, consumables, laboratory reagents, and healthcare products reach healthcare
+                  providers reliably and efficiently. We have built strong relationships with manufacturers,
+                  healthcare facilities, and regulatory bodies.
                 </p>
                 <p>
-                  Today, we serve over 500 hospitals, clinics, and pharmacies, distributing thousands
-                  of pharmaceutical products while maintaining the highest standards of quality and
-                  compliance.
+                  Today, we serve over 2000 hospitals, clinics, and healthcare facilities, distributing
+                  more than 1000 different products while maintaining the highest standards of quality
+                  and compliance.
                 </p>
               </div>
             </div>
@@ -135,9 +134,9 @@ export default async function AboutPage() {
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Our Mission</h3>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                To provide reliable, quality pharmaceutical products and medical supplies to
-                healthcare providers across the region, ensuring timely delivery and exceptional
-                service while maintaining the highest standards of safety and compliance.
+                To provide reliable, quality medical devices, equipment, consumables, laboratory reagents,
+                and healthcare products to healthcare providers across the region, ensuring timely delivery
+                and exceptional service while maintaining the highest standards of safety and compliance.
               </p>
             </div>
             <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-lg border border-primary/20">
@@ -148,8 +147,8 @@ export default async function AboutPage() {
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Our Vision</h3>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                To be the leading pharmaceutical wholesale distributor in East Africa, recognized
-                for excellence in service delivery, innovation in supply chain management, and
+                To be the leading medical equipment and healthcare product wholesale distributor in East Africa,
+                recognized for excellence in service delivery, innovation in supply chain management, and
                 unwavering commitment to improving healthcare accessibility.
               </p>
             </div>
@@ -237,7 +236,7 @@ export default async function AboutPage() {
             Partner with Us Today
           </h2>
           <p className="text-sm sm:text-base lg:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
-            Join hundreds of healthcare providers who trust Impact Pharma for their pharmaceutical supply needs
+            Join 2000+ healthcare providers who trust Impact Pharma for their medical equipment and healthcare product needs
           </p>
           <Link
             href="/contact"

@@ -30,10 +30,10 @@ export default async function ServicesSection() {
               Comprehensive Solutions for Healthcare
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
-              We provide comprehensive pharmaceutical distribution services,
-              ensuring quality products reach healthcare facilities efficiently
-              and reliably. Our commitment to excellence makes us the preferred
-              partner for healthcare providers across the region.
+              We provide comprehensive wholesale distribution services for medical devices,
+              equipment, consumables, laboratory reagents, and healthcare products,
+              ensuring quality reaches healthcare facilities efficiently and reliably.
+              Our commitment to excellence makes us the preferred partner for healthcare providers across the region.
             </p>
             <Link
               href="/services"

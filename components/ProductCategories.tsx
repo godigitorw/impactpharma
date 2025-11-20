@@ -43,8 +43,8 @@ export default function ProductCategories() {
             Product Categories
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
-            Explore our extensive range of pharmaceutical products and medical supplies
-            across multiple categories
+            Explore our extensive range of medical devices, equipment, consumables, laboratory reagents,
+            and healthcare products across multiple categories
           </p>
         </div>
 

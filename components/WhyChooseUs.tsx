@@ -6,8 +6,8 @@ export default function WhyChooseUs() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "Over a Decade of Excellence",
-      description: "More than 10 years of proven track record in pharmaceutical distribution across the region.",
+      title: "Established Excellence Since 2019",
+      description: "Proven track record in medical equipment and healthcare product distribution across the region.",
     },
     {
       icon: (
@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
         </svg>
       ),
       title: "Quality Assurance Guaranteed",
-      description: "All products undergo rigorous quality control and meet international pharmaceutical standards.",
+      description: "All medical devices and healthcare products undergo rigorous quality control and meet international standards.",
     },
     {
       icon: (
@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
         </svg>
       ),
       title: "Trusted by Healthcare Providers",
-      description: "Serving hundreds of hospitals, clinics, and pharmacies with reliable pharmaceutical supplies.",
+      description: "Serving 2000+ hospitals, clinics, and healthcare facilities with reliable medical equipment and supplies.",
     },
     {
       icon: (
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         </svg>
       ),
       title: "Fully Certified & Compliant",
-      description: "Licensed and compliant with all regulatory requirements and pharmaceutical standards.",
+      description: "Licensed and compliant with all regulatory requirements and medical equipment standards.",
     },
     {
       icon: (
@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
             Why Choose Impact Pharma
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
-            We are committed to excellence in pharmaceutical distribution,
+            We are committed to excellence in medical equipment and healthcare product distribution,
             combining experience, quality, and reliability to serve the healthcare industry
           </p>
         </div>

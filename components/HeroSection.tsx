@@ -12,7 +12,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed max-w-xl">
-            Supplying quality medicines and medical supplies to hospitals, clinics, and pharmacies across the region
+            Leading wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products
           </p>
 
           {/* CTA Buttons */}
@@ -60,15 +60,15 @@ export default function HeroSection() {
           {/* Quick Stats */}
           <div className="mt-10 sm:mt-12 lg:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 border-t border-gray-200 pt-6 sm:pt-8 md:border-none md:pt-0">
             <div className="text-left">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">10+</div>
-              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Years Experience</div>
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">Since 2019</div>
+              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Years in Business</div>
             </div>
             <div className="text-left">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">500+</div>
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">1000+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Products</div>
             </div>
             <div className="text-left">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">200+</div>
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">2000+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Clients Served</div>
             </div>
             <div className="text-left">
@@ -88,7 +88,7 @@ export default function HeroSection() {
         <div className="hidden lg:block lg:w-[40%] relative">
           <Image
             src="https://impactpharma.b-cdn.net/pexels-ivan-s-4989175.jpg"
-            alt="Pharmaceutical Distribution"
+            alt="Medical Equipment and Healthcare Products Distribution"
             fill
             className="object-cover"
             priority

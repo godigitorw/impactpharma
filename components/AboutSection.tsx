@@ -10,10 +10,10 @@ export default function AboutSection() {
           <div>
             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
               Your Trusted Partner in <br />
-              Pharmaceutical Distribution
+              Medical Equipment Distribution
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
-              For over a decade, Impact Pharma has been at the forefront of pharmaceutical wholesale distribution, delivering quality medicines and medical supplies to healthcare facilities across the region with unwavering commitment to excellence and reliability.
+              Since 2019, Impact Pharma has been a leading wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products. We serve over 2000 clients with a comprehensive range of 1000+ products, delivering excellence and reliability across the region.
             </p>
             <Link
               href="/about"

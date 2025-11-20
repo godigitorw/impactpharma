@@ -6,8 +6,8 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Impact Pharma - Your Trusted Partner in Pharmaceutical Wholesale Distribution",
-  description: "Supplying quality medicines and medical supplies to hospitals, clinics, and pharmacies",
+  title: "Impact Pharma - Leading Medical Equipment & Healthcare Product Wholesaler | Since 2019",
+  description: "Wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products. Serving 2000+ clients with 1000+ products across East Africa.",
   icons: {
     icon: "https://impactpharma.b-cdn.net/web%20web%20icon.png",
   },

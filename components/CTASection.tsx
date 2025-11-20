@@ -15,9 +15,9 @@ export default function CTASection() {
             Ready to Partner with Us?
           </h2>
           <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12">
-            Join hundreds of healthcare providers who trust Impact Pharma for their
-            pharmaceutical supply needs. Get started today and experience reliable
-            service and quality products.
+            Join 2000+ healthcare providers who trust Impact Pharma for their medical equipment
+            and healthcare product needs. Get started today and experience reliable service and
+            quality products.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

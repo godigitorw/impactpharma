@@ -78,7 +78,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-xs sm:text-sm mb-4 leading-relaxed">
-              Leading pharmaceutical wholesale distributor. Providing quality medicines, medical equipment, and healthcare solutions to hospitals, clinics, and pharmacies across East Africa.
+              Leading wholesale distributor of medical devices, equipment, consumables, laboratory reagents, and healthcare products. Serving 2000+ healthcare facilities across East Africa since 2019.
             </p>
           </div>
 
@@ -270,7 +270,7 @@ export default function Footer() {
               © {currentYear} Impact Pharma Rwanda. All Rights Reserved.
             </p>
             <p className="text-[10px] sm:text-xs text-gray-500 mt-1 sm:mt-2">
-              Leading pharmaceutical wholesale distributor in East Africa
+              Leading medical equipment and healthcare product wholesale distributor in East Africa
             </p>
           </div>
         </div>
