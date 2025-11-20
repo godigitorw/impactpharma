@@ -25,6 +25,10 @@ export default function ClientLogos() {
       alt: "RBC",
     },
     {
+      src: "https://impactpharma.b-cdn.net/RMS%20LOGO-01.png",
+      alt: "RMS",
+    },
+    {
       src: "https://impactpharma.b-cdn.net/Blue_Logo_CHUB.png",
       alt: "CHUB",
     },
