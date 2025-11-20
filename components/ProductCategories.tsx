@@ -1,39 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import { prisma } from "@/lib/prisma";
 
-export default function ProductCategories() {
-  const categories = [
-    {
-      name: "Prescription Medicines",
-      description: "Wide range of prescription medications for various treatments",
-      image: "https://impactpharma.b-cdn.net/pexels-pietrozj-360622.jpg",
-    },
-    {
-      name: "Over-the-Counter Products",
-      description: "Quality OTC medications and health supplements",
-      image: "https://impactpharma.b-cdn.net/pexels-julie-viken-148496-593451.jpg",
-    },
-    {
-      name: "Medical Equipment",
-      description: "Professional medical devices and diagnostic equipment",
-      image: "https://impactpharma.b-cdn.net/pexels-shvetsa-3845129.jpg",
-    },
-    {
-      name: "Surgical Supplies",
-      description: "Comprehensive surgical instruments and supplies",
-      image: "https://impactpharma.b-cdn.net/pexels-karola-g-6627704.jpg",
-    },
-    {
-      name: "Laboratory Supplies",
-      description: "Complete range of laboratory equipment and reagents",
-      image: "https://impactpharma.b-cdn.net/pexels-jess-vide-9268926.jpg",
-    },
-    {
-      name: "Personal Protective Equipment",
-      description: "High-quality PPE for healthcare professionals",
-      image: "https://impactpharma.b-cdn.net/pexels-cdc-library-3993241.jpg",
-    },
-  ];
+async function getProductCategories() {
+  try {
+    const categories = await prisma.productCategory.findMany({
+      orderBy: {
+        order: "asc",
+      },
+    });
+    return categories;
+  } catch (error) {
+    console.error("Error fetching product categories:", error);
+    return [];
+  }
+}
+
+export default async function ProductCategories() {
+  const categories = await getProductCategories();
 
   return (
     <section className="py-10 sm:py-12 lg:py-20 bg-white">

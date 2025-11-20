@@ -26,10 +26,8 @@ export default function ProductsPage() {
     name: "",
     description: "",
     image: "",
-    products: [] as string[],
     order: 0,
   });
-  const [newProductInput, setNewProductInput] = useState("");
 
   useEffect(() => {
     fetchCategories();
@@ -89,7 +87,6 @@ export default function ProductsPage() {
         name: category.name,
         description: category.description,
         image: category.image,
-        products: JSON.parse(category.products),
         order: category.order,
       });
     } else {
@@ -98,36 +95,17 @@ export default function ProductsPage() {
         name: "",
         description: "",
         image: "",
-        products: [],
         order: 0,
       });
     }
-    setNewProductInput("");
     setEditModalOpen(true);
-  };
-
-  const addProduct = () => {
-    if (newProductInput.trim()) {
-      setFormData({
-        ...formData,
-        products: [...formData.products, newProductInput.trim()],
-      });
-      setNewProductInput("");
-    }
-  };
-
-  const removeProduct = (index: number) => {
-    setFormData({
-      ...formData,
-      products: formData.products.filter((_, i) => i !== index),
-    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.description || !formData.image || formData.products.length === 0) {
-      alert("Please fill in all required fields and add at least one product");
+    if (!formData.name || !formData.description || !formData.image) {
+      alert("Please fill in all required fields");
       return;
     }
 
@@ -136,8 +114,8 @@ export default function ProductsPage() {
       const method = editingCategory ? "PATCH" : "POST";
 
       const body = editingCategory
-        ? { ...formData, products: JSON.stringify(formData.products), id: editingCategory.id }
-        : { ...formData, products: JSON.stringify(formData.products) };
+        ? { ...formData, products: "[]", id: editingCategory.id }
+        : { ...formData, products: "[]" };
 
       const response = await fetch(url, {
         method,
@@ -170,7 +148,7 @@ export default function ProductsPage() {
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-semibold text-gray-900 mb-2">Product Categories</h1>
-          <p className="text-gray-600">Manage your product categories and product lists</p>
+          <p className="text-gray-600">Manage your product categories</p>
         </div>
         <button
           onClick={() => openEditModal()}
@@ -222,9 +200,6 @@ export default function ProductsPage() {
                     Description
                   </th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Products
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
                     Order
                   </th>
                   <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">
@@ -233,9 +208,7 @@ export default function ProductsPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {categories.map((category) => {
-                  const productsList = JSON.parse(category.products);
-                  return (
+                {categories.map((category) => (
                     <tr key={category.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4">
                         <div className="relative w-16 h-16 rounded overflow-hidden">
@@ -253,11 +226,6 @@ export default function ProductsPage() {
                       <td className="px-6 py-4">
                         <p className="text-sm text-gray-600 line-clamp-2 max-w-md">
                           {category.description}
-                        </p>
-                      </td>
-                      <td className="px-6 py-4">
-                        <p className="text-sm text-gray-600">
-                          {productsList.length} product{productsList.length !== 1 ? 's' : ''}
                         </p>
                       </td>
                       <td className="px-6 py-4">
@@ -286,8 +254,7 @@ export default function ProductsPage() {
                         </div>
                       </td>
                     </tr>
-                  );
-                })}
+                  ))}
               </tbody>
             </table>
           </div>
@@ -342,51 +309,6 @@ export default function ProductsPage() {
                   onChange={(url) => setFormData({ ...formData, image: url })}
                   label="Upload Category Image"
                 />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Products *
-                </label>
-                <div className="space-y-3">
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={newProductInput}
-                      onChange={(e) => setNewProductInput(e.target.value)}
-                      onKeyPress={(e) => e.key === "Enter" && (e.preventDefault(), addProduct())}
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                      placeholder="Enter product name (e.g., Antibiotics)"
-                    />
-                    <button
-                      type="button"
-                      onClick={addProduct}
-                      className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors"
-                    >
-                      Add
-                    </button>
-                  </div>
-                  {formData.products.length > 0 && (
-                    <div className="border border-gray-300 rounded-lg p-4 max-h-48 overflow-y-auto">
-                      <ul className="space-y-2">
-                        {formData.products.map((product, index) => (
-                          <li key={index} className="flex items-center justify-between bg-gray-50 px-3 py-2 rounded">
-                            <span className="text-gray-700">{product}</span>
-                            <button
-                              type="button"
-                              onClick={() => removeProduct(index)}
-                              className="text-red-600 hover:text-red-700"
-                            >
-                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                              </svg>
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
               </div>
 
               <div>
