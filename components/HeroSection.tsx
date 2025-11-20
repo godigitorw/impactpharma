@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 flex-grow flex items-center pt-[100px] sm:pt-[120px] pb-16 sm:pb-20 lg:pt-[90px] lg:pb-0">
         <div className="w-full lg:w-[60%] relative z-10">
-          <h1 className="font-medium text-gray-900 mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[85px] xl:leading-[85px] leading-tight">
+          <h1 className="font-medium text-gray-900 mb-4 sm:mb-6 text-[2.5rem] leading-tight sm:text-5xl md:text-6xl lg:text-6xl xl:text-[85px] xl:leading-[85px]">
             Making a Lasting{" "}
             <span className="text-primary block sm:inline">Impact on Health.</span>
           </h1>
