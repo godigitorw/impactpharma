@@ -21,15 +21,15 @@ export default async function ServicesSection() {
   const services = await getServices();
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <section className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
           {/* Left Column - Title, Description, CTA (Sticky) */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-5xl font-medium text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
               Comprehensive Solutions for Healthcare
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
               We provide comprehensive pharmaceutical distribution services,
               ensuring quality products reach healthcare facilities efficiently
               and reliably. Our commitment to excellence makes us the preferred
@@ -37,11 +37,11 @@ export default async function ServicesSection() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-7 py-3.5 rounded font-semibold text-base transition-all duration-200"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
             >
               View All Services
               <svg
-                className="ml-2 w-5 h-5"
+                className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -56,14 +56,14 @@ export default async function ServicesSection() {
             </Link>
           </div>
 
-          {/* Right Column - Services List (70% width, aligned right) */}
-          <div className="w-[70%] ml-auto space-y-12">
+          {/* Right Column - Services List (70% width on desktop, full width on mobile) */}
+          <div className="w-full lg:w-[70%] lg:ml-auto space-y-8 sm:space-y-10 lg:space-y-12">
             {services.map((service) => (
               <div
                 key={service.id}
                 className="space-y-3"
               >
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden">
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -72,10 +72,10 @@ export default async function ServicesSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                 </div>

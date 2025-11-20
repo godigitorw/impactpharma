@@ -3,27 +3,27 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[90vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-[90px]">
-        <div className="w-full lg:w-[60%]">
-          <h1 className="font-medium text-gray-900 mb-6" style={{ fontSize: '85px', lineHeight: '85px' }}>
+    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 flex-grow flex items-center pt-[100px] sm:pt-[120px] pb-16 sm:pb-20 lg:pt-[90px] lg:pb-0">
+        <div className="w-full lg:w-[60%] relative z-10">
+          <h1 className="font-medium text-gray-900 mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[85px] xl:leading-[85px] leading-tight">
             Making a Lasting{" "}
-            <span className="text-primary">Impact on Health.</span>
+            <span className="text-primary block sm:inline">Impact on Health.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed max-w-xl">
             Supplying quality medicines and medical supplies to hospitals, clinics, and pharmacies across the region
           </p>
 
           {/* CTA Button */}
-          <div>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
               href="/request-quote"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-7 py-3.5 rounded font-semibold text-base transition-all duration-200"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
             >
               Request Quote
               <svg
-                className="ml-2 w-5 h-5"
+                className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -39,25 +39,25 @@ export default function HeroSection() {
           </div>
 
           {/* Quick Stats */}
-          <div className="mt-20 flex items-center gap-8">
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-primary mb-1">10+</div>
-              <div className="text-sm text-gray-600 leading-tight">Years Experience</div>
+          <div className="mt-10 sm:mt-12 lg:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 border-t border-gray-200 pt-6 sm:pt-8 md:border-none md:pt-0">
+            <div className="text-center md:text-left">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">10+</div>
+              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Years Experience</div>
             </div>
-            <div className="h-12 w-px bg-gray-300"></div>
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-primary mb-1">500+</div>
-              <div className="text-sm text-gray-600 leading-tight">Products</div>
+            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
+            <div className="text-center md:text-left">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">500+</div>
+              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Products</div>
             </div>
-            <div className="h-12 w-px bg-gray-300"></div>
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-primary mb-1">200+</div>
-              <div className="text-sm text-gray-600 leading-tight">Clients Served</div>
+            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
+            <div className="text-center md:text-left">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">200+</div>
+              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Clients Served</div>
             </div>
-            <div className="h-12 w-px bg-gray-300"></div>
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-primary mb-1">5+</div>
-              <div className="text-sm text-gray-600 leading-tight">Certifications</div>
+            <div className="hidden md:block h-12 w-px bg-gray-300"></div>
+            <div className="text-center md:text-left">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">5+</div>
+              <div className="text-xs sm:text-sm text-gray-600 leading-tight">Certifications</div>
             </div>
           </div>
         </div>

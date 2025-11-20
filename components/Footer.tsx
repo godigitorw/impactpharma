@@ -50,33 +50,33 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-10 lg:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Column 1: Company Info */}
-          <div>
-            <div className="mb-4">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="mb-3 sm:mb-4">
               <Image
                 src="https://impactpharma.b-cdn.net/Impact%20Pharma%20new%20Logo.png"
                 alt="Impact Pharma Logo"
                 width={160}
                 height={50}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-8 sm:h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-sm mb-4 leading-relaxed">
+            <p className="text-xs sm:text-sm mb-4 leading-relaxed">
               Leading pharmaceutical wholesale distributor. Providing quality medicines, medical equipment, and healthcare solutions to hospitals, clinics, and pharmacies across East Africa.
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-primary transition-colors duration-200"
+                    className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -87,13 +87,13 @@ export default function Footer() {
 
           {/* Column 3: Product Categories */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Product Categories</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Product Categories</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {productCategories.map((category) => (
                 <li key={category.name}>
                   <Link
                     href={category.href}
-                    className="text-sm hover:text-primary transition-colors duration-200"
+                    className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
                   >
                     {category.name}
                   </Link>
@@ -103,10 +103,10 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Contact Info */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h3>
             {contactDetails.length > 0 ? (
-              <ul className="space-y-4 text-sm">
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 {contactDetails.map((detail) => (
                   <li key={detail.id} className="space-y-3">
                     {detail.phone && (
@@ -196,15 +196,15 @@ export default function Footer() {
               </ul>
             ) : (
               <div>
-                <p className="text-sm mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
                   Get in touch with us for any inquiries about our products, services, or to request a quote.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors font-medium text-sm"
+                  className="inline-flex items-center gap-2 bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-primary-600 transition-colors font-medium text-xs sm:text-sm"
                 >
                   <svg
-                    className="h-5 w-5"
+                    className="h-4 w-4 sm:h-5 sm:w-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -226,12 +226,12 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-4 sm:py-6">
           <div className="text-center">
-            <p className="text-sm">
+            <p className="text-xs sm:text-sm">
               © {currentYear} Impact Pharma Rwanda. All Rights Reserved.
             </p>
-            <p className="text-xs text-gray-500 mt-2">
+            <p className="text-[10px] sm:text-xs text-gray-500 mt-1 sm:mt-2">
               Leading pharmaceutical wholesale distributor in East Africa
             </p>
           </div>

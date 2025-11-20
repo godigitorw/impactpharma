@@ -36,46 +36,46 @@ export default function ProductCategories() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-medium text-gray-900 mb-6">
+    <section className="py-10 sm:py-12 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-3 sm:mb-4 lg:mb-6">
             Product Categories
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
             Explore our extensive range of pharmaceutical products and medical supplies
             across multiple categories
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden"
+              className="border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden group"
             >
-              <div className="relative h-48 w-full">
+              <div className="relative h-40 sm:h-48 w-full overflow-hidden">
                 <Image
                   src={category.image}
                   alt={category.name}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <div className="p-4 sm:p-5 lg:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                   {category.name}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm lg:text-base">
                   {category.description}
                 </p>
                 <Link
                   href="/products"
-                  className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors duration-200"
+                  className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors duration-200 text-sm sm:text-base"
                 >
                   View Products
                   <svg
-                    className="ml-2 w-4 h-4"
+                    className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
