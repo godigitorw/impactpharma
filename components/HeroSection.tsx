@@ -16,7 +16,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row gap-2 sm:gap-4 max-w-[70%] sm:max-w-none">
+          <div className="flex flex-row gap-2 sm:gap-4 max-w-[80%] sm:max-w-none">
             <Link
               href="/request-quote"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-3 sm:px-7 py-3 sm:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200 flex-1 sm:flex-initial sm:w-auto"
@@ -58,7 +58,7 @@ export default function HeroSection() {
           </div>
 
           {/* Quick Stats */}
-          <div className="mt-10 sm:mt-12 lg:mt-20 grid grid-cols-4 gap-4 sm:gap-6 md:gap-8 border-t border-gray-200 pt-6 sm:pt-8 md:border-none md:pt-0">
+          <div className="mt-10 sm:mt-12 lg:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 border-t border-gray-200 pt-6 sm:pt-8 md:border-none md:pt-0">
             <div className="text-center md:text-left">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-1">10+</div>
               <div className="text-xs sm:text-sm text-gray-600 leading-tight">Years Experience</div>
