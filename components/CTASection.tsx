@@ -78,7 +78,7 @@ export default function CTASection() {
               </svg>
               <div className="text-left">
                 <p className="text-sm text-white/70">Call Us</p>
-                <p className="font-semibold">+250 788 123 456</p>
+                <p className="font-semibold">+250 788 309 142</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -97,7 +97,7 @@ export default function CTASection() {
               </svg>
               <div className="text-left">
                 <p className="text-sm text-white/70">Email Us</p>
-                <p className="font-semibold">info@impactpharma.rw</p>
+                <p className="font-semibold">impactpharma19@gmail.com</p>
               </div>
             </div>
           </div>

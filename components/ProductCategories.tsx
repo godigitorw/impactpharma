@@ -32,11 +32,15 @@ export default async function ProductCategories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden group"
+              className={`border border-primary rounded-lg hover:bg-primary/5 transition-all duration-200 overflow-hidden group ${
+                index < 3
+                  ? 'lg:col-span-2'
+                  : 'lg:col-span-3'
+              }`}
             >
               <div className="relative h-40 sm:h-48 w-full overflow-hidden">
                 <Image

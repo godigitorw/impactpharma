@@ -1,27 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import ProductsClient from "./ProductsClient";
 
-async function getProductCategories() {
+async function getProductCategoriesWithProducts() {
   try {
     const categories = await prisma.productCategory.findMany({
+      include: {
+        Product: {
+          orderBy: {
+            createdAt: "desc",
+          },
+        },
+      },
       orderBy: {
         order: "asc",
       },
     });
     return categories;
   } catch (error) {
-    console.error("Error fetching product categories:", error);
+    console.error("Error fetching product categories with products:", error);
     return [];
   }
 }
 
 export default async function ProductsPage() {
-  const categoriesData = await getProductCategories();
-  const categories = categoriesData.map((cat) => ({
-    ...cat,
-    products: JSON.parse(cat.products),
-  }));
+  const categories = await getProductCategoriesWithProducts();
 
   return (
     <main>
@@ -36,97 +40,14 @@ export default async function ProductsPage() {
               Our Products
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
-              Comprehensive pharmaceutical products and medical supplies across multiple categories
+              Explore our comprehensive range of medical devices, equipment, consumables, laboratory reagents, and healthcare products
             </p>
           </div>
         </div>
       </section>
 
-      {/* Product Categories */}
-      <section className="py-10 sm:py-12 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
-            {categories.map((category, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Image */}
-                <div
-                  className={`relative h-48 sm:h-64 lg:h-[400px] rounded-lg overflow-hidden ${
-                    index % 2 === 1 ? "lg:order-2" : ""
-                  }`}
-                >
-                  <Image
-                    src={category.image}
-                    alt={category.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-900 mb-3 sm:mb-4">
-                    {category.name}
-                  </h2>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                    {category.description}
-                  </p>
-
-                  <div className="mb-6 sm:mb-8">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-                      Product Range:
-                    </h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-                      {category.products.map((product: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <svg
-                            className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 shrink-0"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          <span className="text-xs sm:text-sm lg:text-base text-gray-700">{product}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link
-                    href="/request-quote"
-                    className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-5 sm:px-6 lg:px-7 py-2.5 sm:py-3 lg:py-3.5 rounded font-semibold text-sm sm:text-base transition-all duration-200"
-                  >
-                    Request a Quote
-                    <svg
-                      className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Products Client Component with Filtering and Pagination */}
+      <ProductsClient categories={categories} />
 
       {/* Quality Standards Section */}
       <section className="py-10 sm:py-12 lg:py-20 bg-gradient-to-br from-primary-50 via-blue-50 to-white relative overflow-hidden">
@@ -139,7 +60,7 @@ export default async function ProductsPage() {
               Quality Standards
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
-              All our products meet the highest pharmaceutical standards and regulatory requirements
+              All our products meet the highest medical and pharmaceutical standards and regulatory requirements
             </p>
           </div>
 
@@ -210,7 +131,7 @@ export default async function ProductsPage() {
             Need Help Finding Products?
           </h2>
           <p className="text-sm sm:text-base lg:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
-            Our team is ready to assist you in finding the right pharmaceutical products for your needs
+            Our team is ready to assist you in finding the right medical equipment and products for your needs
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
