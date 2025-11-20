@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-[#F9F9F9]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-10 sm:py-12 lg:py-20 bg-[#F9F9F9]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div>
             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
@@ -36,8 +36,8 @@ export default function AboutSection() {
             </Link>
           </div>
 
-          {/* Right Column - Video */}
-          <div className="relative h-[400px] lg:h-[500px]">
+          {/* Right Column - Video (hidden on mobile) */}
+          <div className="hidden lg:block relative lg:h-[500px]">
             <video
               autoPlay
               loop
