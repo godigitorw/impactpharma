@@ -8,11 +8,11 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div>
-            <h2 className="text-5xl font-medium text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
               Your Trusted Partner in <br />
               Pharmaceutical Distribution
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
               For over a decade, Impact Pharma has been at the forefront of pharmaceutical wholesale distribution, delivering quality medicines and medical supplies to healthcare facilities across the region with unwavering commitment to excellence and reliability.
             </p>
             <Link
