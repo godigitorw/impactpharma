@@ -58,35 +58,37 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-50 via-blue-50 to-white relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary-50 via-blue-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(27,167,212,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(102,209,231,0.08),transparent_40%)]"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-6">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-gray-900 mb-4 sm:mb-6">
             Why Choose Impact Pharma
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
             We are committed to excellence in pharmaceutical distribution,
             combining experience, quality, and reliability to serve the healthcare industry
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-200"
+              className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-200"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-                {reason.icon}
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-3 sm:mb-4 lg:mb-6">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {reason.icon.props.children}
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                 {reason.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
                 {reason.description}
               </p>
             </div>
