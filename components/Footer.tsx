@@ -15,9 +15,16 @@ interface ContactDetail {
   order: number;
 }
 
+interface ProductCategory {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [contactDetails, setContactDetails] = useState<ContactDetail[]>([]);
+  const [productCategories, setProductCategories] = useState<ProductCategory[]>([]);
 
   useEffect(() => {
     // Fetch general contact details
@@ -31,6 +38,18 @@ export default function Footer() {
       .catch((error) => {
         console.error("Error fetching contact details:", error);
       });
+
+    // Fetch product categories
+    fetch("/api/admin/products")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setProductCategories(data.slice(0, 6)); // Show max 6 categories
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching product categories:", error);
+      });
   }, []);
 
   const quickLinks = [
@@ -40,11 +59,6 @@ export default function Footer() {
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
     { name: "Request Quote", href: "/request-quote" },
-  ];
-
-  const productCategories = [
-    { name: "All Products", href: "/products" },
-    { name: "Request a Quote", href: "/request-quote" },
   ];
 
   return (
@@ -91,16 +105,37 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">Product Categories</h3>
               <ul className="space-y-1.5 sm:space-y-2">
-                {productCategories.map((category) => (
-                  <li key={category.name}>
-                    <Link
-                      href={category.href}
-                      className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
-                    >
-                      {category.name}
-                    </Link>
-                  </li>
-                ))}
+                {productCategories.length > 0 ? (
+                  productCategories.map((category) => (
+                    <li key={category.id}>
+                      <Link
+                        href="/products"
+                        className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
+                      >
+                        {category.name}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <>
+                    <li>
+                      <Link
+                        href="/products"
+                        className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
+                      >
+                        All Products
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/request-quote"
+                        className="text-xs sm:text-sm hover:text-primary transition-colors duration-200"
+                      >
+                        Request a Quote
+                      </Link>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </div>
