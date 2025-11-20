@@ -45,7 +45,7 @@ export default async function ServicesPage() {
               Our Services
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed px-2 sm:px-0">
-              Comprehensive pharmaceutical distribution solutions designed to meet the needs of healthcare facilities across Rwanda
+              Comprehensive distribution solutions for medical devices, equipment, consumables, laboratory reagents, and healthcare products across East Africa
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default async function ServicesPage() {
                 </svg>
               </div>
               <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-gray-900 mb-1.5 sm:mb-2">24/7 Availability</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-600">Round-the-clock service for your pharmaceutical needs</p>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600">Round-the-clock service for your medical equipment needs</p>
             </div>
 
             <div className="text-center">
@@ -154,7 +154,7 @@ export default async function ServicesPage() {
                 </svg>
               </div>
               <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-gray-900 mb-1.5 sm:mb-2">Quality Guaranteed</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-600">GDP-compliant operations ensuring product integrity</p>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600">Certified products from trusted manufacturers worldwide</p>
             </div>
 
             <div className="text-center">
@@ -173,8 +173,8 @@ export default async function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-gray-900 mb-1.5 sm:mb-2">Nationwide Coverage</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-600">Serving healthcare facilities across Rwanda</p>
+              <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-gray-900 mb-1.5 sm:mb-2">Regional Coverage</h3>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600">Serving 2000+ healthcare facilities across East Africa</p>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default async function ServicesPage() {
             Ready to Partner With Us?
           </h2>
           <p className="text-sm sm:text-base lg:text-xl text-gray-600 mb-6 sm:mb-7 lg:mb-8 leading-relaxed px-2 sm:px-0">
-            Let us help you streamline your pharmaceutical supply chain with our reliable distribution services
+            Let us help you with reliable distribution of medical equipment, devices, consumables, and healthcare products
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
