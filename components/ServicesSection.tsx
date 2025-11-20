@@ -57,7 +57,7 @@ export default async function ServicesSection() {
           </div>
 
           {/* Right Column - Services List (70% width on desktop, full width on mobile) */}
-          <div className="w-full lg:w-[70%] lg:ml-auto space-y-8 sm:space-y-10 lg:space-y-12">
+          <div className="w-full lg:w-[70%] lg:ml-auto space-y-6 sm:space-y-7 lg:space-y-8">
             {services.map((service) => (
               <div
                 key={service.id}
