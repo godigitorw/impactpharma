@@ -4,10 +4,9 @@ import bcrypt from "bcryptjs";
 
 // In a production environment, this should be stored in a database
 const ADMIN_CREDENTIALS = {
-  email: "admin@impactpharma.rw",
-  // Default password: "admin123" (hashed)
-  // You should change this immediately after first login
-  passwordHash: "$2a$10$ZxQk5YxGxG0kHXQvQZxvYuKQH1qnpZ6ZGKmvZYxGxG0kHXQvQZxvYu",
+  email: "impactpharma19@gmail.com",
+  // Password: "impactpharma19@!"
+  password: "impactpharma19@!",
   name: "Admin User",
 };
 
@@ -29,9 +28,8 @@ const handler = NextAuth({
           return null;
         }
 
-        // For initial setup, accept the default password
-        // In production, you should hash the password properly
-        const isValidPassword = credentials.password === "admin123";
+        // Check if password matches
+        const isValidPassword = credentials.password === ADMIN_CREDENTIALS.password;
 
         if (!isValidPassword) {
           return null;

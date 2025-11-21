@@ -10,11 +10,11 @@ The admin panel provides a secure management interface for the Impact Pharma web
 http://localhost:3000/admin/login
 ```
 
-### Default Credentials
-- **Email:** admin@impactpharma.rw
-- **Password:** admin123
+### Admin Credentials
+- **Email:** impactpharma19@gmail.com
+- **Password:** impactpharma19@!
 
-⚠️ **IMPORTANT:** Change these credentials immediately after first login in a production environment!
+⚠️ **IMPORTANT:** Keep these credentials secure and change them if needed!
 
 ## Features
 
