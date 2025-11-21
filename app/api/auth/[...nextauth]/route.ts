@@ -23,8 +23,11 @@ const handler = NextAuth({
           return null;
         }
 
+        console.log('Login attempt with email:', credentials.email);
+
         // Check if email matches
         if (credentials.email !== ADMIN_CREDENTIALS.email) {
+          console.log('Email mismatch');
           return null;
         }
 
