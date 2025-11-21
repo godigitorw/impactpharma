@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
+// Revalidate every 10 seconds
+export const revalidate = 10;
+
 interface BlogPost {
   id: number;
   title: string;

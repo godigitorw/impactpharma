@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 
+// Revalidate every 10 seconds
+export const revalidate = 10;
+
 interface Service {
   id: number;
   title: string;

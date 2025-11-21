@@ -3,6 +3,9 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import ProductsClient from "./ProductsClient";
 
+// Revalidate every 10 seconds
+export const revalidate = 10;
+
 async function getProductCategoriesWithProducts() {
   try {
     const categories = await prisma.productCategory.findMany({

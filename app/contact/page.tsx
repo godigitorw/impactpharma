@@ -1,6 +1,9 @@
 import { prisma } from "@/lib/prisma";
 import ContactForm from "@/components/ContactForm";
 
+// Revalidate every 10 seconds
+export const revalidate = 10;
+
 async function getContactDetails() {
   try {
     const contactDetails = await prisma.contactDetails.findMany({
